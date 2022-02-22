@@ -1,0 +1,16 @@
+1)
+SELECT * FROM `students` WHERE `date_of_birth` >= '1990-01-01' AND `date_of_birth` <= '1990-12-31' ORDER BY `date_of_birth`
+2)
+SELECT COUNT(cfu) FROM courses WHERE cfu BETWEEN 10 AND 30
+3)
+SELECT * FROM `students` WHERE `date_of_birth` >= '1971-01-01' AND `date_of_birth` <= '1992-12-31' ORDER BY `students`.`date_of_birth` DESC
+4)
+SELECT COUNT(year) FROM `courses` WHERE `period` = 'I semestre' AND `year` = '1'
+5)
+SELECT COUNT(date) FROM `exams` WHERE `hour` >= '14:00:00' AND `date` = '2020-06-20'
+6)
+SELECT COUNT(level) FROM `degrees` WHERE `level` = 'magistrale'
+7)
+SELECT COUNT(id) FROM `departments`
+8)
+SELECT COUNT(phone) FROM `teachers` WHERE `phone` IS NOT NULL
