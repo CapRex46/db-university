@@ -1,3 +1,8 @@
 1)
 SELECT `students`.`name`, `students`.`surname`, `students`.`id`, `degrees`.`name` FROM `students` JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` WHERE `degrees`.`name` LIKE 'Corso di Laurea in Economia'
 2)
+SELECT `departments`. `name` AS 'Dipartimento', `degrees`.`name` FROM departments INNER JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id` WHERE `departments`. `name` = 'Dipartimento di Neuroscienze' ORDER BY `degrees`.`name`
+3)
+SELECT `students`.`surname`, `students`.`name`, `students`.`registration_number`, `degrees`.`name`, `departments`.`name` FROM `students` JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id` JOIN `departments`ON `departments`.`id` = `degrees`.`department_id` ORDER BY `students`.`surname`, `students`.`name`
+6)
+SELECT DISTINCT `course_teacher`.`teacher_id`, `degrees`.`department_id` FROM `course_teacher` JOIN `courses` ON `courses`.`id` = `course_teacher`.`course_id` JOIN `degrees` ON `courses`.`degree_id` = `degree_id` WHERE `degrees`.`department_id`= 5 ORDER BY `course_teacher`.`teacher_id`
